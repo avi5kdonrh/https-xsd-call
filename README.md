@@ -1,12 +1,12 @@
 # https-xsd-call
 
--- To use the classpath XSD that will eliminate any http call whatsoever, try the camel-war-classpath-xsd project.
+## To use the classpath XSD that will eliminate any http call whatsoever, try the camel-war-classpath-xsd project.
 
 - The camel-spring-xx.jar already contains the XSD so, we don't need to refer it from the internet, simply use the following in the schemalocation:
 
 `http://camel.apache.org/schema/spring classpath:camel-spring.xsd`
 
--- To use https to fetch the XSD, try the camel-war-https-xsd project
+## To use https to fetch the XSD, try the camel-war-https-xsd project
 
 - First fetch the correct certificate in PEM format
 
@@ -22,7 +22,7 @@
         <property name="javax.net.ssl.trustStorePassword" value="password"/>
     </system-properties>language
 ```
--- One caveat with fetching the XSD from https is that the certificate you just imported has a limited validity and you'll have to import a new certificate after it expires so, using the classpath XSD appears to be the better option here.
+### One caveat with fetching the XSD from https is that the certificate you just imported has a limited validity and you'll have to import a new certificate after it expires so using the classpath XSD appears to be the better option here.
 ```
 Owner: CN=*.apache.org
 Issuer: CN=R3, O=Let's Encrypt, C=US
