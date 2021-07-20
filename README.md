@@ -6,7 +6,7 @@
 
 `http://camel.apache.org/schema/spring classpath:camel-spring.xsd`
 
--- To use the https to fetch the XSD, try the camel-war-https-xsd project
+-- To use https to fetch the XSD, try the camel-war-https-xsd project
 
 - First fetch the correct certificate in PEM format
 
