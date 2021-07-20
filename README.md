@@ -17,7 +17,7 @@
 
 - Then add the following system properties to the server configuration (standalone*.xml)
 ```
-<system-properties>
+    <system-properties>
         <property name="javax.net.ssl.trustStore" value="/abosulute/path/to/test.keystore"/>
         <property name="javax.net.ssl.trustStorePassword" value="password"/>
     </system-properties>language
