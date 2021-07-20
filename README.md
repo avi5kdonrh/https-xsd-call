@@ -16,13 +16,13 @@
 `keytool -import -file apache.crt -alias apache -keystore storename.keystore -storepass password`
 
 - Then add the following system properties to the server configuration (standalone*.xml)
-```<system-properties>
+```
+    <system-properties>
         <property name="javax.net.ssl.trustStore" value="/abosulute/path/to/test.keystore"/>
         <property name="javax.net.ssl.trustStorePassword" value="password"/>
     </system-properties>language
-
 ```
-# One caveat with fetching the XSD from https is that the certificate you just imported has a limited validity and you'll have to import a new certificate after it expires so, using the classpath XSD appears to be the better option here.
+-- One caveat with fetching the XSD from https is that the certificate you just imported has a limited validity and you'll have to import a new certificate after it expires so, using the classpath XSD appears to be the better option here.
 ```
 Owner: CN=*.apache.org
 Issuer: CN=R3, O=Let's Encrypt, C=US
